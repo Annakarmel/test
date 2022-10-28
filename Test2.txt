@@ -1,0 +1,138 @@
+1. Explain JRE, JDK, JVM
+-> JRE: Java Runtime Environment
+		JRE is a combination of JVM and set of libraries.
+		JRE physically exists
+
+   JDK: Java Development Kit
+		JDK will available in the JRE
+	
+   JVM: Java Virtual Machine
+		JVM will be taking the help of 'set of libraries' that are available in the JRE to execute the bytecode.
+	    The main purpose of JVM is "Provide Runtime Environment" to execute byte code.
+	    before the JVM execution it'll make some tasks,
+		1. Loads the byte code
+		2. Verifies the byte code
+		3. Execute the byte code
+
+2. Explain the following
+	i. Class, Object, static, public, private keywords
+	 -> Class: It is a design or blueprint which contains states and behaviour
+			   State is represented as variable and behaviours is represented as methods.
+	 -> Object: It is a instance of classes, purpose of this is to create a multiple of copy of class.
+	 -> static: It is a variable which is there inside the class and outside the main
+	 -> private keywords: pre-defined/reserved words are consider to be as keywords. 
+
+	ii. public: It is access specifier or modifier
+		static: Non access modifier
+		void: It doesnot have any return value
+		main: It is a method name
+		(String []args): Parameter
+	iii. System.out.println(): It is used to print an argument that is passed to it.
+	
+3. What is an Array
+-> "It is a Collection of data which stores a group of similar type of data in a single reference(variable)".
+		Syntax: Datatype [] variableName = {data};
+		Ex: String superMarket[] = {"Snacks" , "Cosmetics" , "Fruits" , "Vegetables"};
+
+4. Write a program
+   Given Array: number[] = {23,45,56,67,8,12,3,5,7,9,102,34,4,5}
+   i. Count the no. of prime numbers in the given array
+		class Prime{
+			public static void main(String a[]){
+			int number[] = {23,45,56,67,8,12,3,5,7,9,102,34,4,5};
+				if(n % 2 == 0){  
+			System.out.println("The number is not prime");	  
+			}
+	  
+		else{	     
+			System.out.println("The number is prime");	  
+			}	  
+		}
+		}
+   
+   ii. Display the even number with Count in the given array
+   
+   iii Display the array size
+   
+5. Explain the Datatypes in the java and give example for each.
+-> "It represents the diffrent values stored in a vaeiable"
+	There are 2 types Datatypes are there,
+	i. Premitive : Anything which sores with lowecase
+			   Ex: byte, short, int, long, double, char, boolean, float
+	ii. Non-premitive : Anything which sores with uppercase
+					Ex: String, Sysytem, className, reference type
+
+6. What is variable, Explain its types with an examples. 
+-> "Variable is a registered area allocated(datatype) in a memory"
+	types of variables
+	i. Local variable: Any variable Which is used inside the class and inside the main.
+	ii. static variable:Any variable Which is used inside the class and outside the main.
+	iii. non-static / instance: which declared the outside the class, outside the main, outside the constructor.
+	iv. Parameter: 
+	
+7. What is constructor, when is the class constructor invoked, 
+   will a class contain multiple constructors, Explain its types with an example.
+   
+8. Explain the java features
+->i. Simple and easy: it doesn't use header, its dont have pointer and operator overloading
+  ii. High performance: JVM can execute vyte code very fast.
+  iii. Platform independent: Write a once run anywhere
+  iv. Portable: Easily carried, it write once and run manytime / anywhere
+  v. Secure: it will access restriction by access modifiers.
+
+9. What gives java its 'write once and run anywhere' nature
+
+
+10. What is the purpose of static methods and variables
+
+11. What is the purpose of default constructor
+->  default constructor will initialize the values more than once.
+		  
+12. Write a program to reverse a given number
+	Ex: Input: 1234 output: 4321
+	class Reverse{
+		public static void main(String args[]) {
+			int a,b;
+			int d = 0;
+			
+			System.out.print("Enter number");
+			a = 1234;
+			b = a% 10;
+			a = a / 10;
+			d = (d*10)+ b;
+			}
+			System.out.println("reverse is:"+d);
+			}
+	}
+	
+	public static void main(String a[]) {
+		reverse("Annakarmel Bellary\n");
+
+13. Write a program to get the factorial of a number.
+->  class Factorial{
+	public static void main(String a[]){
+	int num = 10;
+	long factorial = 1;
+	
+	for(int i = 1; i <= num; i++){
+		factorial * = 1;
+		}
+		System.out.println("Factorial of %d%d",num,factorial);
+	}
+	}
+
+14. Write a program to get the sum of digits.
+	Ex: Input: 234 output: 9
+->	class Sum{
+		public static void main(String a[]){
+		int a = 234;
+		int x, sum = 0;
+		
+		while(a > 0){
+		x = a%10;
+		sum = sum+x;
+		n = n / 10;
+		}
+		System.out.println("Sum of digits:" + sum);
+		}
+	}
