@@ -1,0 +1,145 @@
+1. * Java collection is a class, it is a framework taht provides a set of interface and classes.
+     Java Collection Hierarchy is the hierarchy of the whole collection framework and it contained within it with four core interfaces,
+     they are Collection, Set, Map and List. Additionally, there are two more focused interfaces namely the SortedSet and SortedMap 
+     which is used for sorting purpose.
+     Collection —> 1. Link-> ArrayList, LinkedList
+				  2. Set-> HashSet, LinkedHashSet
+				  3. SotedSet-> TreeSet
+				  4. Queue-> LinkedList
+   * JDK doesn’t provide any direct implementations of this interface. But, JDK provides direct implementations of it’s sub interfaces. 
+     ArrayList, Vector, HashSet, LinkedHashSet, PriorityQueue are some indirect implementations of Collection interface. 
+	 Map interface, which is also a part of java collection framework, doesn’t inherit from Collection interface. 
+	 Collection interface is a member of java.util package.
+	 
+2. There are two interfaces for implementing Map in java: 
+   Map and SortedMap, and three classes: 
+   HashMap: HashMap is the implementation of Map, but it doesn't maintain any order.
+   LinkedHashMap: LinkedHashMap is the implementation of Map. It inherits HashMap class. It maintains insertion order. 
+   TreeMap: TreeMap is the implementation of Map and SortedMap. It maintains ascending order.
+   
+3. HashSet: * The Hash set is executed with the help of a HashTable.
+			* It does not authorise a heterogeneous object.
+			* It permits a null object.
+			* To compare two objects, we use the equals method.
+			* It does not support any order.
+			
+   TreeSet: * The tree set is executed with the help of a tree structure.
+			* It authorises a heterogeneous object.
+			* It does not permit the null object.
+			* To compare two objects, we use the compare method.
+			* TreeSet supports an object in sorted order.
+			
+4.  It indicates the implementation of hashCode() is native because there is not any direct method in java to fetch the reference of the object.
+    An object hash code value can change in multiple executions of the same application. If two objects are equal according to equals() method,
+	then their hash code must be same. If two objects are unequal according to equals() method, their hash code are not required to be different.
+
+5. Fail-Fast systems abort operation as-fast-as-possible exposing failures immediately and stopping the whole operation. 
+   Whereas, Fail-Safe systems don't abort an operation in the case of a failure. Such systems try to avoid raising failures as much as possible.	
+   
+6. * Get the bytes of the String.
+   * Create a new ByteArrayInputStream using the bytes of the String.
+   * Assign the ByteArrayInputStream object to an InputStream variable.
+   * Buffer contains bytes that read from the stream.
+   * Print the InputStream.
+   
+7. An object for traversing and partitioning elements of a source. The source of elements covered by a Spliterator could be, 
+   for example, an array, a Collection , an IO channel, or a generator function. A Spliterator may traverse elements individually 
+   ( tryAdvance() ) or sequentially in bulk ( forEachRemaining() ).
+   
+8.  The stream() function converts any Collection into a stream of data
+    map() function is used to process the data
+    There is also another function, named filter(), where we can include filtering criteria
+
+9. Core (spring-core) is the core of the framework that power features such as Inversion of Control and dependency injection. 
+   Beans (spring-beans) provides Beanfactory, which is a sophisticated implementation of the factory pattern.
+   
+10. dependency injection is a design pattern in which an object or function receives other objects or functions that it depends on. 
+    A form of inversion of control, dependency injection aims to separate the concerns of constructing objects and using them, 
+	leading to loosely coupled programs.
+
+11. We can use Spring Framework to define our beans and their dependency injection. The @ComponentScan annotation is used to 
+    find beans and the corresponding injected with @Autowired annotation. If you followed the Spring Boot typical layout, 
+	no need to specify any arguments for @ComponentScan annotation.
+	
+12. 
+
+13. StringBuffer                                                 StringBuilder
+*   StringBuffer is synchronized i.e. thread safe. 	             StringBuilder is non-synchronized i.e. not thread safe. 
+*	StringBuffer is less efficient than StringBuilder.	         StringBuilder is more efficient than StringBuffer.
+*	StringBuffer was introduced in Java 1.0	                     StringBuilder was introduced in Java 1.5
+
+14. The BeanFactory Interface:
+	root interface for accessing a Spring bean container. 
+	It is the actual container that instantiates, configures, and manages a number of beans. 
+	These beans collaborate with one another and thus have dependencies between themselves. 
+	These dependencies are reflected in the configuration data used by the BeanFactory. 
+	This interface is implemented by the objects that hold a number of bean definitions, each uniquely identified by a String name. 
+	The most common implementation class used for this BeanFactory is XmlBeanFactory available in org.springframework.beans.factory.xml package. 
+
+
+	The ApplicationContext Interface:
+	This interface is designed on top of the BeanFactory interface. 
+	The ApplicationContext interface is the advanced container that enhances BeanFactory functionality in a more framework-oriented style.
+	While the BeanFactory provides basic functionality for managing and manipulating beans, 
+	often in a programmatic way, the ApplicationContext provides extra functionality like MessageSource, Access to resources, 
+	Event propagation to beans, Loading of multiple (hierarchical) contexts etc. There are so many implementation classes that can be used 
+	such as ClassPathXmlApplicationContext, FileSystemXmlApplicationContext, AnnotationConfigWebApplicationContext etc.
+
+
+17. Maven:  is a powerful project management tool that is based on POM (project object model). 
+    It is used for projects build, dependency and documentation.
+	Gradle: is a build automation tool known for its flexibility to build software. A build automation tool is used 
+	to automate the creation of applications. The building process includes compiling, linking, and packaging the code. 
+	The process becomes more consistent with the help of build automation tools.
+	
+18. package encryptdecrypt;
+
+    public class Main {
+
+    final static int lower_case_a = 'a';
+    final static int lower_case_z = 'z';
+
+    public static void main(String[] args) {
+        String s = "we found a treasure!";
+
+        StringBuffer reverse = new StringBuffer();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            if ((int)c >= lower_case_a && (int)c <= lower_case_z)
+                reverse.append((char)(lower_case_z - c + lower_case_a));
+            else
+                reverse.append((char) c);
+        }
+        System.out.println(reverse.toString());
+    }
+ }
+
+20.
+import java.util.*;
+
+  public class Exercise13 {
+  public static void main(String[] args) {
+    // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+          l_list.add("Pink");
+          l_list.add("orange");
+      
+     // print the list
+   System.out.println("The Original linked list: " + l_list);
+
+  // Remove the first element
+    Object firstElement = l_list.removeFirst();
+    System.out.println("Element removed: "+ firstElement);
+ 
+  // Remove the last element
+    Object lastElement = l_list.removeLast();
+    System.out.println("Element removed: "+ lastElement);
+    System.out.println("The New linked list: " + l_list);
+  }
+}

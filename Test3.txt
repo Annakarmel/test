@@ -1,0 +1,114 @@
+1. Your task is to make two functions(max and min or maximum and minimum depending on the language)
+   that recievr a  list of intergers as input and return the largest and lowest number in that list, rspectively.
+   input:[45,333,76,29,900,23,474,654,29,454]
+   output: min: -> 23
+   max: -> 900
+   
+-> class MinAndMax{
+		public static void main(String args[]){
+			int array[] = {45,333,76,29,900,23,474,654,29,454};
+			int min = a[0];
+			int max = a[0];
+			
+			for(int index = 1; index < a.length; index++){
+			 if(a[index] > max){
+			   max = a[max];
+			 
+			 } else if(a[index] < min){
+			      min = a[min];
+			   } 
+			}
+			System.out.println("The maximum num is: " + max);
+			System.out.println("The minimum num is: " + min);
+		}
+	}
+   
+2. Timmy and sarah think they are in love, but around where they live, they will only know once they pick a 
+   flower each. If one of the flowers has an even number of petals and the other has an odd number of petals, 
+   it means they are in love. Write a function that will take the number of petals each flower and return true 
+   if they are in love and false if they aren't.
+-> 
+    class EvenOrOdd {
+	 	public static void main(String args[]){
+		
+		int petalNum;
+		Scanner sc = new Scanner(System.in);
+		int petalNumber = sc,nextInt();
+		
+		if(petalNumber %2 == 0){
+			System.out.println("Both are in Love");
+			}else{
+				System.out.println("Both are in not love");
+				}
+			}
+	 }
+   
+3. What re the generalized and specialized classes in Java.
+-> generalized classes is super class. 
+   specialized classes is sub class.
+   
+4a. I don't want my class to be inherited by any other class. what should I do?
+-> By making the class constructor as private. If we make the class constructor private we'll not be able 
+   to create the object of this class from outside of this class.
+
+4b. Can you give a few eaxmples of final classes defined in java API?
+-> java.lang.String,  java.lang.Math are final classes.
+
+4c. What are the some alternatives to inheritance?
+->  Delegation is an alternative to inheritance. 
+    Delegation means that you include an instance of another class as an instance variable, 
+	and forward messages to the instance. It is often safer than inheritance because it forces 
+	you to think about each message you forward, because the instance is of a known class, 
+	rather than a new class, and because it doesn't force you to accept all the methods of the 
+	super class: you can provide only the methods that really make sense. On the other hand, 
+	it makes you write more code, and it is harder to re-use (because it is not a subclass).
+
+5. Which sorted collection have you used?
+-> To sort a list: use List and use Collections.sort(). 
+   To make sure elements in the list are unique and always sorted: use a SortedSet.
+
+6. What is the difference between LinkedList and ArrayList in Java?
+-> ArrayList: i. Fixed in size.
+			  ii. Memory is allocated in compile time.
+			  iii. Arrays are sorted in contiguous location.
+			  iv. Use less memory than LinkedList.
+			  v. Elements can be accessed easily.
+			  vi. Insertion and deletion operation takes time.
+			  
+   LinkedList: i. Dynamic in size.
+			   ii. Linked list are not sorted in comtiguous location.
+			   iii. Memory is allocated at runtime.
+			   iv. Uses more memory because it stores the both data and address of next node.
+			   v. Elements accessing requres the traversal of the whole linkedList.
+			   vi. Insertion and deletion operation is faster. 
+			   
+7. What is the difference between ListIetrator and Iterator in Java.
+-> ListIerator: * Used in traverse list only.
+				* Using ListIetrator, we can traverse list in both direction.
+				* Add and Update element is allowed in ListIetrator().
+				* We can obtain index at any point while traversing.
+				* Ietrator can ietrate through List collection only.
+				
+   Iterator: * It iterface only iterator in forward direction.
+			 * Add and Update element is not allowed in Ietrator().
+			 * We can obtain not index at any pint while travering.
+			 * Ietrator can ietrate through List, Set and Map collection only
+ 
+8. What is the covariant method overriding in Java
+-> Helps to remove the client-side typecasting by enabling you to return a subtype of the overridden method's 
+   actual return type. Covariant Method overriding means that when overriding a method in the child class, 
+   the return type may vary.
+   
+9. What is memory leakage in java.
+-> A Memory Leak is a situation where there are objects present in the heap that are no longer used, 
+   but the garbage collector is unable to remove them from memory, and therefore, they're unnecessarily maintained. 
+   A memory leak is bad because it blocks memory resources and degrades system performance over time.
+
+10. Explian static polymorphism and dymanic polymorphism?
+-> Static polymorphism: it is a type of polymorphism that collects the information to call a method 
+   during compile time.
+   
+   dynamic polymorphism: it is a type of polymorphism that collects information to call a method at run time. 
+
+11. Hema created a class called PersonalInformation and she want to give security for the properties how can she achieve.
+-> Encapsulation.
